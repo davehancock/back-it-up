@@ -1,7 +1,7 @@
-package com.otf.backup.client.dropbox;
+package com.djh.backup.client.dropbox;
 
-import com.otf.backup.OTFBackupConfiguration;
-import com.otf.backup.client.BackupClient;
+import com.djh.backup.OTFBackupConfiguration;
+import com.djh.backup.client.BackupClient;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
