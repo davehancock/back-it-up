@@ -1,6 +1,6 @@
 package com.djh.backup.client.dropbox;
 
-import com.djh.backup.OTFBackupConfiguration;
+import com.djh.backup.BackupConfiguration;
 import com.djh.backup.client.BackupClient;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -17,7 +17,7 @@ import javax.inject.Inject;
  * @author David Hancock
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = OTFBackupConfiguration.class)
+@ContextConfiguration(classes = BackupConfiguration.class)
 @TestPropertySource(properties = {"accessToken = SECRET"})
 @Ignore
 public class DropboxBackupClientIntegrationTest {

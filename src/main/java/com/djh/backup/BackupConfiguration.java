@@ -19,7 +19,7 @@ import java.util.Locale;
  * @author David Hancock
  */
 @Configuration
-public class OTFBackupConfiguration {
+public class BackupConfiguration {
 
     @Bean
     public BackupClient backupClient(CompressionService compressionService, ArchiveService archiveService, DbxClientV2 client) {
@@ -33,7 +33,7 @@ public class OTFBackupConfiguration {
 
     @Bean
     public DbxRequestConfig config() {
-        return new DbxRequestConfig("dropbox/otf-backup", Locale.UK.toString());
+        return new DbxRequestConfig("dropbox/djh-backup", Locale.UK.toString());
     }
 
     @Bean
