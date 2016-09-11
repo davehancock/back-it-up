@@ -1,0 +1,22 @@
+sudo: required
+dist: trusty
+
+services:
+  - docker
+
+language: java
+
+jdk:
+  - oraclejdk8
+
+after_success:
+
+  - if [ $TRAVIS_BRANCH == 'master' ]; then
+        docker build -t daves125125/back-it-up .;
+        docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+        docker push daves125125/back-it-up;
+    fi
+
+notifications:
+  email: false
+  slack: daves125125:u7vNQf4kI6z5ybUzAeh2pKmm
